@@ -11,25 +11,17 @@
 remote_file "/home/ubuntu/sme_jenkins_tools.jar" do
   source "http://172.27.4.48/iso/sme-jenkins-tools.jar"
   mode "0644"
-#  not_if { ::File.exists?(java_file) }
 end
 
-remote_file "/home/ubuntu/chromedriver" do
-  source "http://172.27.4.48/cache/chromedriver"
-  mode "0777"
-#  not_if { ::File.exists?(java_file) }
+remote_file "/home/ubuntu/jenkins-slave-nongui.sh" do
+	source "http://172.27.4.48/cache/jenkins-slave-gui.sh"
 end
-
-#include_recipe "java::set_attributes_from_version"
-#include_recipe "java::#{node['java']['install_flavor']}"
 
 # Install sms_jenkins_tools
 execute "install-jar" do
   cwd "/home/ubuntu"
   command <<-EOF
-    /home/ubuntu/java/jdk1.7.0_51/bin/java -jar sme_jenkins_tools.jar -m 172.27.4.77 -c -g
-    # command for installing Python goes here	
+    ./jenkins-slave-gui.sh > log.txt &
     EOF
-#  not_if { ::File.exists?(java_file) }
 end
 
