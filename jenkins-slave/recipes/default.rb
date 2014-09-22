@@ -15,6 +15,7 @@ end
 
 remote_file "/home/ubuntu/jenkins-slave-nongui.sh" do
 	source "http://172.27.4.48/cache/jenkins-slave-nongui.sh"
+	mode "0777"
 end
 
 # Install sms_jenkins_tools
