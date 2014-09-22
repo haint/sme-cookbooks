@@ -22,7 +22,7 @@ end
 execute "install-jar" do
   cwd "/home/ubuntu"
   command <<-EOF
-    ./jenkins-slave-nongui.sh > log.txt &
+    ./jenkins-slave-nongui.sh > jenkins-non-gui-log.txt &
     EOF
 end
 

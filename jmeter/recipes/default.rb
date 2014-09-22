@@ -30,6 +30,6 @@ end
 execute "run jmeter-server" do
   cwd "/home/ubuntu"
   command <<-EOF
-    ./jmeter-run.sh > log.txt &
+    ./jmeter-run.sh > jmeter-log.txt &
     EOF
 end
