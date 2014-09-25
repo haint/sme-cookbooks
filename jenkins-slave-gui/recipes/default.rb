@@ -13,7 +13,7 @@ remote_file "/home/ubuntu/sme_jenkins_tools.jar" do
   mode "0644"
 end
 
-remote_file "/home/ubuntu/jenkins-slave-nongui.sh" do
+remote_file "/home/ubuntu/jenkins-slave-gui.sh" do
 	source "http://172.27.4.48/cache/jenkins-slave-gui.sh"
 	mode "0777"
 end
