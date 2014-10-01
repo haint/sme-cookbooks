@@ -18,6 +18,11 @@ remote_file "/home/ubuntu/jenkins-slave-gui.sh" do
 	mode "0777"
 end
 
+remote_file "/home/ubuntu/chromedriver" do
+	source "http://172.27.4.48/cache/chromedriver"
+	mode "0777"
+end
+
 # Install sms_jenkins_tools
 execute "install-jar" do
   cwd "/home/ubuntu"
