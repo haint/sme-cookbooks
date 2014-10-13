@@ -8,8 +8,8 @@
 
 # download file from url
 
-remote_file "/home/ubuntu/apache-jmeter-2.10.tgz" do
-  source "http://172.27.4.48/cache/apache-jmeter-2.10.tgz"
+remote_file "/home/ubuntu/apache-jmeter-2.11.tgz" do
+  source "http://172.27.4.48/cache/apache-jmeter-2.11.tgz"
   mode "0644"
 end
 
@@ -23,7 +23,7 @@ end
 execute "extract-jmeter" do
   cwd "/home/ubuntu"
   command <<-EOF
-    tar -xvf apache-jmeter-2.10.tgz
+    tar -xvf apache-jmeter-2.11.tgz
     EOF
 end
 
